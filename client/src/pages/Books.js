@@ -28,9 +28,9 @@ class Books extends Component {
         return (
             <Container fluid className="container">
                 <Jumbotron />
-                <Container>
+                
                     <SavedBooks savedBooks={this.state.savedBooks} handleDeleteButton={this.handleDeleteButton} />
-                </Container>
+                
             </Container>
         )
     }
@@ -38,4 +38,4 @@ class Books extends Component {
 
 
 
-export default Books 
+export default Books; 

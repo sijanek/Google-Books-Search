@@ -58,7 +58,7 @@ class Search extends Component {
         event.preventDefault();
         console.log(this.state.books)
         let savedBook = this.state.books.filter(book => book.id === event.target.id)
-        console.log({savedBook})
+        console.log({ savedBook })
         const newBook = {
             title: savedBook[0].title,
             author: savedBook[0].author ? savedBook[0].author[0] : "",
@@ -70,35 +70,40 @@ class Search extends Component {
         console.log(newBook);
         API.saveBook(newBook)
             // .then(this.setState({ message: alert("Your book is saved") }))
-            .then(data => console.log (data))
+            .then(data => console.log(data))
             .catch(err => console.log(err))
     }
     render() {
         return (
             <Container fluid>
-                <Jumbotron>
-                    <h1 className="text-black
-                    ">Find Your Good Reads with GoogleBook App</h1>
-                </Jumbotron>
-                <Container>
-                    <Row>
-                        <Col size="12">
-                            <SearchForm
-                                handleFormSubmit={this.handleFormSubmit}
-                                handleInputChange={this.handleInputChange}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
+                <Row>
+                    <Col size="12">
+                        <Jumbotron>
+                            <h1 className="text-black">Find Your Good Reads with GoogleBook App</h1>
+                        </Jumbotron>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col size="12">
+                        <SearchForm
+                            handleFormSubmit={this.handleFormSubmit}
+                            handleInputChange={this.handleInputChange}
+                        />
+                    </Col>
+                </Row>
+
                 <br></br>
-                <Container>
-                    <SearchBooks books={this.state.books} handleSavedButton={this.handleSavedButton} />
-                </Container>
+                <Row>
+                    <Col size="12">
+                        <SearchBooks books={this.state.books} handleSavedButton={this.handleSavedButton} />
+                    </Col>
+                </Row>
             </Container>
-        )
+        );
     }
 
 
-}
+};
 
-export default Search
+export default Search;

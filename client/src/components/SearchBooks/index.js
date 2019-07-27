@@ -27,15 +27,15 @@ const SearchBooks = props => {
                                         <Col size="1" className="emptyCol"/>
                                         {/* col-9 show information of the book */}
                                         <Col size="9" className="bookInfo">
-                                            <Row>
+                                            
                                                 <h3 className="bookTitle">{book.title}</h3>
-                                            </Row>
-                                            <Row>
+                                            
+                                            
                                                 <h4 className="bookAuthor">{book.author}</h4>
-                                            </Row>
-                                            <Row>
+                                            
+                                            
                                                 <p className="bookDescription">{book.description}</p>
-                                            </Row>
+                                            
                                         </Col>
                                     </Row>
                                     <br></br>

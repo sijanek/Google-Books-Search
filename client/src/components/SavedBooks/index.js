@@ -27,15 +27,15 @@ const SavedBooks = props => {
                                     <Col size="1" className="emptyCol"/>
                                     {/* col-9 show information of the book */}
                                     <Col size="9" className="bookInfo">
-                                        <Row>
+                                        
                                             <h2 className="bookTitle">{savedBook.title}</h2>
-                                        </Row>
-                                        <Row>
+                                        
+                                        
                                             <h3 className="bookAuthor">{savedBook.author}</h3>
-                                        </Row>
-                                        <Row>
+                                        
+                                        
                                             <p className="bookDescription">{savedBook.description}</p>
-                                        </Row>
+                                        
                                     </Col>
                                 </Row>
                                 <br></br>
